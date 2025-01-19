@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+    background-color: var(--laranja-claro);
+}
+
+.links__cabecalho{
+    padding: 30px 32px;
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 20px;
+}

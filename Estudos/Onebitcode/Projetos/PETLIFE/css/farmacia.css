@@ -1,0 +1,24 @@
+#farmacia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 128px auto;
+    padding: 0 120px;
+}
+
+#conteiner__farmacia{
+    text-align: center;
+}
+#titulo__farmacia{
+    margin: 64px auto;
+    width: 469px;
+    text-align: center;
+}
+#paragrafo__farmacia{
+    width: 954px;
+    margin: 64px auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+}

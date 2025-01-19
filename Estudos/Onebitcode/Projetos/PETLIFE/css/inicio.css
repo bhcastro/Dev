@@ -1,0 +1,44 @@
+#inicio{
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 32px;
+    margin: 84px auto 128px auto;
+    padding: 24px 80px 128px 80px;
+}
+
+#paragrafo__inicio{
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    margin: 30px auto;
+    line-height: 27px;
+}
+
+#link__consulta{
+    margin: 30px 25px;
+    padding: 16px 32px;
+    background-color: var(--laranja-escuro);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    color: var(--branco);
+    border-radius: 8px;
+}
+
+#link__conheca{
+    margin: 30px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: transparent;
+    color: var(--laranja-escuro);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+#imagem__fundo__inicio{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}

@@ -1,0 +1,21 @@
+#clinica{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 120px;
+    margin: 128px auto;
+    gap: 127px;
+}
+
+#paragrafo__clinica{
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 27px;
+}
+
+li{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+}
