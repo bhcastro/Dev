@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+header {
+    text-align: center;
+    color: black;
+    width: fit-content;
+    margin: auto;
+}
+#menu {
+    text-align: center;
+    margin: 30px auto 30px auto;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    padding: 0px;
+    outline: 0px;
+}
+#menu #home {
+    width: fit-content;
+    height: fit-content;
+    margin: 0px;
+}
+#menu input, select {
+    text-align: justify;
+    text-transform: uppercase;
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    margin: 0px 15px 0px 0px;
+    width: 190px;
+    border: solid black;
+    border-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+}
+#menu > a {
+    display: block;
+    margin: 40px auto auto auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+#menu img {
+    width: 20px;
+    height: 20px;
+}
+body {
+    background-image:linear-gradient(to top, #C70000, #ffffff);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    font-weight: bold;
+}
+
+/*QUESTÕES*/
+
+#questao1 input {
+    text-align: justify;
+    text-transform: uppercase;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+}
+
+#questao2 #q2 {
+    text-align: justify;
+    text-transform: uppercase;
+    border-style: solid;
+    border-radius: 5px;
+    margin:10px 0px 10px 0px;
+    border-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+}
+
+#questao3 > textarea {
+    width: 525px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#questao4 input {
+    text-align: justify;
+    text-transform: uppercase;
+    border-style: solid;
+    margin-left: 30px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+}
+#questao4 > textarea {
+    width: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+textarea {
+    text-align: justify;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.63);
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+}
+
+textarea:focus, input:focus {
+    background-color: rgb(156, 156, 156);
+}
+h1, h2 {
+    margin: 0px;
+}
+h3 {
+    margin: 5px 0px 0px 15px;
+}
+h4 {
+    margin: 0px 0px 0px 30px;
+    padding: 0px;
+    border: 0px;
+    height: 1px;  
+}
+
+.q1 {
+    width: 175px;
+    height: 175;
+}
+.q1:hover {
+    
+    width: 400px;
+    height: 400px;
+    opacity: 1.0;
+    
+}
+
+table {
+    
+    border-style:solid;
+    border-color: rgba(0, 0, 0, 0.63);
+    border-radius: 3px;
+    margin: 0px 0px 30px 50px;
+    box-shadow: rgba(0, 0, 0, 0.480) 3px 2px 5px;
+    border-radius: 3px;
+}
+table input {
+    text-align: justify;
+    text-transform: uppercase;
+}
+
+#button { 
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    height: fit-content;
+}

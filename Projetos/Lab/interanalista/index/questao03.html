@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../estilos/style-interanalista.css">
+        <link rel="shortcut icon" href="../imagens/micro_ico.png" type="image/x-icon">
+        <title>InterLab</title>
+    </head>
+
+    <body class="corpo hemato">
+        <header class="cabecalho hemato">
+            <h1>Avaliação de Conhecimentos</h1>
+            <h2>Hematologia e Microscopia</h2>
+        </header>
+        <form class="formulario" autocomplete="off" action="https://formspree.io/f/xjvqwaad" method="post">
+            <nav class="dados__analista">
+                <input readonly placeholder="Unidade" class="seletores seletor__unidade" id="unidade" name="Unidade">
+                <input readonly placeholder="ID" class="seletores seletor__id" id="id" name="Matricula">
+                <input readonly placeholder="Nome" class="seletores seletor__nome" id="nome" name="Nome">
+                <input readonly placeholder="Data" class="seletores seletor__data" id="data" name="Data">
+            </nav>
+            <main>
+                <div class="questao__03">
+                    <h3>3 - Contagem diferencial:</h3>
+                    <section class="seletor">
+                        <input type="text" class="celula nome__celulas" placeholder="Digite a célula:">
+                        <input type="text" class="celula valor__celulas" placeholder="Digite a quantidade:">
+                        <input type="button" onclick="adicionarCelula()" class="botoes botao__adicionar" value="+">
+                    </section>
+                    <section class="contador__celulas">
+                        <ul class="lista__celulas">
+                            <li class="diferencial">
+                                Adicione uma célula.
+                            </li>
+                        </ul>
+                        <p class="total ocultar__total">Total: <span class="total__celulas"></span></p>
+                    </section>
+                </div>
+            </main>
+        </form>
+        <footer class="rodape">
+            Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../imagens/github.png" alt="GitHub" class="github"></a>
+        </footer>
+        <script src="../scripts/questao_03.js"></script>
+    </body>
+</html>

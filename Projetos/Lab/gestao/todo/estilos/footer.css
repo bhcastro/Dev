@@ -1,0 +1,24 @@
+.rodape{
+    display: flex;
+    margin: 10px auto;
+    padding: 5px;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.1em;
+    background-color: var(--transparencia-80);
+    border-radius: 30px;
+    box-shadow: 0px 0px 15px #00000073;
+}
+.rodape:hover{
+    cursor: default;
+
+}
+
+.github{
+    position: relative;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+}

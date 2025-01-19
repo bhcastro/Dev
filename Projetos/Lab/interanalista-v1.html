@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos/style_interanalista-v1.css">
+        <link rel="shortcut icon" href="imagens/micro_ico.png" type="image/x-icon">
+        <title>Interanalista</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Hospital IGESP</h1>
+            <h2>Interanalista</h2>
+        </header>
+
+        
+        <label id="menu">
+
+            <!--Selecionar a Unidade-->
+            
+            <abbr title="Unidade"><img src="imagens/hospital-24px.png" alt="Unidade"></abbr>
+            <select required>
+                <option  selected>Selecione a unidade...</option>
+                <option  value="Bela Vista">Bela Vista</option>
+                <option  value="Litoral">Litoral</option>
+                <option  value="Santana">Santana</option>
+            </select>
+
+            <!--ID-->
+            <abbr title="ID"><img src="imagens/id-24px.png" alt="ID"></abbr>
+            <input required placeholder="ID...">
+
+            <!--NOME-->
+            <abbr title="Nome"><img src="imagens/employee-24px.png" alt="Analista"></abbr>&nbsp;<input required placeholder="Nome...">
+            
+            <!--DATA DE REALIZAÇÃO-->
+            <abbr title="Data de realização"><img src="imagens/calendar-24px.png" alt="Data"></abbr>
+            <input required type="date" style="width: 193px;">
+            <a href="index.html" target="_blank"><img id="home" src="imagens/home.png" alt="Home"></a>
+        </label>
+        
+        <main>       
+            <form action="#">
+                    <!-- Início da prova-->
+                    <!--QUESTÃO 01-->
+                <article id="questao1">
+                        <h3>1 - Identifique as células:</h3>
+                        <sub><h4>Passe o mouse na imagem para ampliar</h4></sub><br>
+                        <ol type="a">
+                            <li>
+                                <input required placeholder="Digite..."><br><br>
+                                    <img class="q1" src="imagens/neutro.jpg" alt="célula"></a><br><br>
+                            </li>
+                            <li>
+                                <input required placeholder="Digite..."><br><br>
+                                    <img class="q1" src="imagens/basofilo.jpg" alt="célula"></a><br><br>
+                            </li>
+                            <li>
+                                <input required placeholder="Digite..."><br><br>
+                                    <img class="q1" src="imagens/linfo.jpg" alt="célula"></a><br><br>
+                            </li>
+                        </ol>
+            
+                </article>
+                    <!--QUESTÃO 02-->
+                <article id="questao2">
+                        <p>
+                            <h3>2 - Efetuada a leitura da lâmina de reticulócitos, responda:</h3>
+                        </p>
+                        <p>
+                            <ol type="a">
+                                    <li>
+                                        Qual valor observado?<br>
+                                        <input id="q2" required placeholder="Digite">
+                                    </li>
+                                    <li>Este valor está de acordo com os valores de referência?</li>
+                                    <input name="questao2" type="radio"><label>Sim</label><br>
+                                    <input name="questao2" type="radio"><label>Não</label>
+                            </ol>
+                        </p>
+                </article>
+                    <!--QUESTÃO 03-->
+                <article id="questao3">
+                            <h3>3 - Efetuada a leitura do esfregaço, classifique sua contagem diferencial:</h3><br>
+                        <table>
+                            <tr>
+                                <th>Célula</th>
+                                <th>Quantidade</th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input  placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                        </table>
+                            <h4>3.1 - Descreva possíveis alterações/observações que julgar relevante:</h4><br>
+                            <textarea placeholder="observações" ></textarea>
+                        </p>
+                </article>
+                    <!--QUESTÃO 04-->
+                <article id="questao4">
+                            <h3>4 - Ainda baseando-se no esfregaço analisado, considerando RBC: 3.89, qual valor de plaquetas você liberaria em laudo:</h3>
+                        <input required placeholder="Valor"><br><br>
+                            <h4>4.1 Alguma observação?</h4><br>
+                        <textarea required placeholder="Digite"></textarea>
+                </article>
+                <p id="button">
+                    <button type="submit" onclick="alert('Boa sorte! &#x1F60A;')">
+                        Finalizar e enviar! &#x2714;
+                    </button>
+                </p>
+            </form>
+        </main>
+        <footer>Developed by Bruno Castro</footer>
+    </body>
+</html>

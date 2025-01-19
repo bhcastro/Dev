@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilos/style-interanalista-v2.css">
+        <link rel="shortcut icon" href="imagens/micro_ico.png" type="image/x-icon">
+        <title>Interanalista</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Medicina Diagnóstica</h1>
+            <h2>Interanalista</h2>
+        </header>
+        <nav>
+            <!--Selecionar a Unidade-->
+            <img class="icones" src="imagens/hospital-24px.png" alt="Unidade">
+            <select id="unidade" required>
+                <option selected>Selecione a unidade...</option>
+                <option>Bela Vista</option>
+                <option>Litoral</option>
+                <option>Santana</option>
+            </select>
+            <!--ID-->
+            <img class="icones" src="imagens/id-24px.png" alt="ID">
+            <input id="id" required placeholder="ID...">
+
+            <!--NOME-->
+            <img class="icones" src="imagens/employee-24px.png" alt="Analista">
+            <input id="nome" required placeholder="Nome...">
+
+            <!--DATA DE REALIZAÇÃO-->
+            <img class="icones" src="imagens/calendar-24px.png" alt="Data">
+            <input id="data" required type="date" style="width: 193px;">
+        </nav>
+        <!-- Início da prova-->
+        <main>       
+            <form action="|">
+                <!--QUESTÃO 01-->
+                    <div id="questao1">
+                        <h3>1 - Identifique as estruturas:</h3>
+                        <sub>Passe o mouse para ampliar.</sub>
+                        <ol type="a">
+                            <li><input type="text" placeholder="Digite"><br><img class="imagens" src="imagens/basofilo.jpg" alt="imagem"></li>
+                        
+                            <li><input type="text" placeholder="Digite"><br><img class="imagens" src="imagens/linfo.jpg" alt="imagem"></li>
+                        
+                            <li><input type="text" placeholder="Digite"><br><img class="imagens" src="imagens/neutro.jpg" alt="imagem"></li>
+                            <li><input type="text" placeholder="Digite"><br><img class="imagens" src="imagens/oxalato.jpg" alt="imagem"><br></li>
+                        </ol>
+                    </div>
+                <div id="questao2">
+                    <h3>2 - Efetuada a leitura da lâmina de reticulócitos, responda:</h3>
+                    <ol type="a">
+                        <li>Qual valor observado?<input required placeholder="Digite"></li>
+
+                        <li>Este valor está dentro da referência?
+                            <input class="radio" name="questao2" type="radio">Sim
+                            <input class="radio" name="questao2" type="radio">Não
+                        </li>
+                    </ol>
+                </div>
+                <div id="questao3">
+                    <h3>3 - Efetue a leitura do esfregaço e responda:</h3>
+                        <p>Classifique sua contagem:</p>
+                        <table id="tabela">
+                            <tr>
+                                <th>Célula</th>
+                                <th>Quantidade</th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input  placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                            <tr>
+                                <th><input placeholder="Célula"></th>
+                                <th><input required placeholder="0"></th>
+                            </tr>
+                        </table>
+                        <ol type="a">
+                            <li>Com RBC de 4.26, qual valor de plaquetas você liberaria? <input type="text" placeholder="Digite"></li> 
+                            <li>Alguma observação relevante?</li><textarea cols="37" rows="5" placeholder="Digite"></textarea>
+                        </ol>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p>Desenvolvido por&nbsp;<a href="https://bhcastro.github.io/HTML/"><strong>&nbsp;&nbsp;Bruno Castro</strong></a></p>
+        </footer>
+    </body>
+</html>

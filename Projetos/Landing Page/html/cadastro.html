@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logos/LabNet/favicon_transparent_32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>LabNet</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1>LabNet</h1>
+        </a>
+        <nav id="home">
+            <a href="index.html"><span class="menu__header">Home</span></a>
+            <a href="calculadoras.html"><span class="menu__header">Calculadoras</span></a>
+            <a href="#"><span class="menu__header">Contato</span></a>
+            <button class="button" id="login">Área do Analista</button>
+        </nav>
+    </header>
+    <div id="div__login" class="ocultar"></div>
+    <section id="popup__login" class="ocultar">
+        <input id="usuario" type="text" placeholder="Usuário" autocomplete="off">
+        <input id="senha" type="password" placeholder="Senha" autocomplete="off">
+        <input class="button" id="botao__login" type="submit" value="Entrar">
+        <a href="#">Esqueci a senha</a>
+    </section>
+    <form action="#">
+        <section id="formulario__cadastro">
+            <input class="inputs__cadastro" type="text" name="nome" id="nome__cadastro" placeholder="Nome*" required>
+            <input  class="inputs__cadastro"type="text" name="sobrenome" id="sobrenome__cadastro" placeholder="Sobrenome*" required>
+            <input class="inputs__cadastro" type="email" name="email" id="email__cadastro" placeholder="E-mail*" required>
+            <input class="inputs__cadastro" type="email" name="confirm__email" id="confirm__email__cadastro" placeholder="Confirme seu E-mail*" required>
+            <input class="inputs__cadastro" type="password" name="senha__cadastro" id="senha__cadastro" placeholder="Senha*" required>
+            <input class="inputs__cadastro" type="password" name="confirm__senha" id="confirm__senha__cadastro" placeholder="Confirme sua senha*" required>
+            <input class="button" type="submit" value="Finalizar Cadastro" id="botao__finaliza__cadastro">
+            <abbr title="Campos obrigatórios">*Campos obrigatórios</abbr>
+        </section>
+        
+    </form>
+    <script src="../js/login.js"></script>
+    <footer class="rodape">
+        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" id="github"></a>
+    </footer>
+</body>
+
+</html>

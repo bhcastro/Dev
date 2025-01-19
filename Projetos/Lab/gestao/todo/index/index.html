@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/styles.css">
+    <link rel="shortcut icon" href="../img/checklist.png" type="image/x-icon">
+    <title>ToDo List</title>
+</head>
+<body class="corpo">
+    <header class="cabecalho">
+        <h1 class="titulo">ToDo List</h1>
+        
+    </header>
+    <hr id="linha">
+    <section class="botoes">
+        <input type="button" value="Adicionar" class="inputs botao__adicionar" onclick="criarTarefa()">
+        <input type="text" class=" inputs nova__tarefa" placeholder="Nova tarefa">
+        <input type="button" value="Limpar tudo" class="inputs botao__limpar" onclick="apagarTudo()">
+    </section>
+    <div class="container">
+        <ul class="lista lista__tarefas">
+            <li class="tarefa_inicial">
+                Crie uma tarefa para começar
+            </li>
+        </ul>
+    </div>
+    <footer class="rodape">
+        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" class="github"></a>
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

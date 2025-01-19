@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/calc_ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/main.css">
+    <title>Calculadora</title>
+</head>
+<body class="corpo">
+    <header class="cabecalho">
+        <h1 id="titulo">Calculadora de Eritroblastos</h1>
+        <hr>
+    </header>
+    <main>
+        <div class="calculadoras calculadora__eritroblastos">
+            <p>
+                Valor de Leucócitos contados pelo equipamento:
+            </p>
+            <input  maxlength="7" autocomplete="off" placeholder="Ex.: 12.345" class="valores" id="valor__leuco">
+            <p>
+                Valor de Eritroblastos contados em lâmina:
+            </p>
+            <input type="number" autocomplete="off" placeholder="Ex.: 10" class="valores" id="valor__ret">
+            <input class="botoes calc__eritro" type="button" value="Calcular">
+            <p>
+                Valor de Leucócitos corrigido:
+            </p>
+            <input step=".0" readonly class="valores leuco__corrigido" placeholder="Calculando">
+            <input class="botoes reset" type="button" value="Limpar" onclick="location.reload()">
+            <article id="fontes">
+                Entenda o cálculo e veja a fonte clicando <a href="https://hemoclass.com.br/mostrar-blog/correcao-de-eritroblastos/65">aqui!</a>
+            </article>    
+        </div>            
+    </main>
+    <script src="../scripts/calc_eritro.js"></script>
+</body>
+<footer>
+    <p class="rodape">Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img id="github" src="../imagens/github.png" alt="GitHub Site"></a></p>
+</footer>
+</html>
