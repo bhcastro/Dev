@@ -2,6 +2,7 @@ function iniciar(){
     const botaoImprimir = document.querySelector('.botao__imprimir');
     const botaRealizar = document.querySelector('.botao__realizar');
     const dadosAnalista = document.querySelector('nav');
+    const conteudoPrincipal = document.querySelector('#conteudo_principal');
 
     let analista = prompt ('Digite seu nome:');
     let matricula = prompt ('Digite seu ID:');
@@ -26,6 +27,7 @@ function iniciar(){
     dadosAnalista.classList.add('mostrar__nav');
     botaRealizar.classList.add('ocultar');
     botaoImprimir.classList.remove('ocultar');
+    conteudoPrincipal.classList.remove('ocultar');
 }
 
 function imprimir(){
@@ -34,7 +36,7 @@ function imprimir(){
     const botaoImprimir = document.querySelector('.botao__imprimir');
     const seletor = document.querySelector('.seletor');
     seletor.classList.add('ocultar');
-    zerarBordas.classList.add('zerar_bordas')
+    zerarBordas.classList.add('zerar_bordas');
     questao01Imprimir.classList.add('impressao');
     botaoImprimir.classList.add('ocultar');
     print();
