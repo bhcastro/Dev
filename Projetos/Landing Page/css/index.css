@@ -4,7 +4,9 @@
 @import url(cadastro.css);
 @import url(header.css);
 @import url(login.css);
+@import url(reset-pwd.css);
 @import url(calculadoras.css);
+@import url(contato.css);
 @import url(footer.css);
 *{
     box-sizing: border-box;

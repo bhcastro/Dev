@@ -10,39 +10,36 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <h1>LabNet</h1>
-        </a>
+        <h1 id="titulo-principal">LabNet</h1>
         <nav id="home">
             <a href="index.html"><span class="menu__header">Home</span></a>
             <a href="calculadoras.html"><span class="menu__header">Calculadoras</span></a>
-            <a href="#"><span class="menu__header">Contato</span></a>
-            <button class="button" id="login">Área do Analista</button>
+            <a href="contato.html"><span class="menu__header">Contato</span></a>
+            <a href="cadastro.html" class="button" id="button-cadastrar">Cadastrar</a>
+            <a href="login.html" class="button" id="button-login">Área do Analista</a>
         </nav>
     </header>
-    <div id="div__login" class="ocultar"></div>
-    <section id="popup__login" class="ocultar">
-        <input id="usuario" type="text" placeholder="Usuário" autocomplete="off">
-        <input id="senha" type="password" placeholder="Senha" autocomplete="off">
-        <input class="button" id="botao__login" type="submit" value="Entrar">
-        <a href="#">Esqueci a senha</a>
+    <section id="conteudo-cadastro">
+            <div id="conteudo__login">
+                    <section id="cabecalho__conteiner">
+                        <h2 id="titulo__conteiner">Crie sua conta</h2>
+                        <span id="span-cadastro">
+                            Já possui conta? Clique <a href="login.html" id="link__login"><i>aqui</i></a> e faça seu login.
+                        </span>
+                    </section>
+                <section id="dados-cadastro">
+                        <input class="inputs-cadastro" id="cadastro-nome" type="text" placeholder="Nome">
+                        <input class="inputs-cadastro" id="cadastro-sobrenome" type="text" placeholder="Sobrenome">
+                        <input class="inputs-cadastro" id="cadastro-email" type="email" placeholder="E-mail">
+                        <input class="inputs-cadastro" id="cadastro-senha" type="password" placeholder="Senha">
+                        <input class="inputs-cadastro" type="button" id="botao-cadastrar" value="Cadastrar">
+                </section>
+            </div>
     </section>
-    <form action="#">
-        <section id="formulario__cadastro">
-            <input class="inputs__cadastro" type="text" name="nome" id="nome__cadastro" placeholder="Nome*" required>
-            <input  class="inputs__cadastro"type="text" name="sobrenome" id="sobrenome__cadastro" placeholder="Sobrenome*" required>
-            <input class="inputs__cadastro" type="email" name="email" id="email__cadastro" placeholder="E-mail*" required>
-            <input class="inputs__cadastro" type="email" name="confirm__email" id="confirm__email__cadastro" placeholder="Confirme seu E-mail*" required>
-            <input class="inputs__cadastro" type="password" name="senha__cadastro" id="senha__cadastro" placeholder="Senha*" required>
-            <input class="inputs__cadastro" type="password" name="confirm__senha" id="confirm__senha__cadastro" placeholder="Confirme sua senha*" required>
-            <input class="button" type="submit" value="Finalizar Cadastro" id="botao__finaliza__cadastro">
-            <abbr title="Campos obrigatórios">*Campos obrigatórios</abbr>
-        </section>
-        
-    </form>
-    <script src="../js/login.js"></script>
+    <script src="../js/cadastro.js"></script>
     <footer class="rodape">
-        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" id="github"></a>
+        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img
+                src="../img/github.png" alt="GitHub" id="github"></a>
     </footer>
 </body>
 

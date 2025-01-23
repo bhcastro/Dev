@@ -8,27 +8,17 @@
     <link rel="stylesheet" href="../css/index.css">
     <title>Calculadoras</title>
 </head>
-
 <body>
     <header>
-        <a href="index.html">
-            <h1>LabNet</h1>
-        </a>
+        <h1 id="titulo-principal">LabNet</h1>
         <nav id="home">
             <a href="index.html"><span class="menu__header">Home</span></a>
             <a href="calculadoras.html"><span class="menu__header">Calculadoras</span></a>
-            <a href="#"><span class="menu__header">Contato</span></a>
-            <a href="cadastro.html" class="button" id="cadastrar">Cadastrar</a>
-            <button class="button" id="login">Área do Analista</button>
+            <a href="contato.html"><span class="menu__header">Contato</span></a>
+            <a href="cadastro.html" class="button" id="button-cadastrar">Cadastrar</a>
+            <a href="login.html" class="button" id="button-login">Área do Analista</a>
         </nav>
     </header>
-    <div id="div__login" class="ocultar"></div>
-    <section id="popup__login" class="ocultar">
-        <input id="usuario" type="text" placeholder="Usuário" autocomplete="off">
-        <input id="senha" type="password" placeholder="Senha" autocomplete="off">
-        <input class="button" id="botao__login" type="submit" value="Entrar">
-        <a href="#">Esqueci a senha</a>
-    </section>
     <main id="calculadoras">
         <section class="conteiner__calculadoras background" id="calc__cv">
             <div class="div__conteiner">
@@ -111,7 +101,6 @@
             </div>
         </section>
     </main>
-    <script src="../js/login.js"></script>
     <script src="../js/scripts_calculadoras/calc_plaq_citrato.js"></script>
     <script src="../js/scripts_calculadoras/calc_eritro.js"></script>
     <script src="../js/scripts_calculadoras/calc_cv.js"></script>

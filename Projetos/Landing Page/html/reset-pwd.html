@@ -20,9 +20,22 @@
             <a href="login.html" class="button" id="button-login">Área do Analista</a>
         </nav>
     </header>
+    <main id="conteudo-principal">
+        <span id="span-reset-pwd">Insira seu e-mail para receber um código de verificação.</span>
+        <section class="conteiner" id="gerar__codigo">
+            <input type="text" class="inputs-reset-pwd" id="input-email" placeholder="E-mail">
+            <input class="botoes-reset-pw" id="botao__gerar__codigo" type="button" value="Gerar código">
+        </section>
+        <section class="conteiner ocultar" id="verificar__codigo">
+            <input type="text" class="inputs-reset-pwd" id="input-codigo" placeholder="Digite o código" maxlength="4">
+            <input type="button" class="botoes-reset-pw botoes__codigo" id="verificar" value="Verificar">
+            <input type="button" class="botoes-reset-pw botoes__codigo" id="gerar__novo" value="Novo código">
+        </section>
+    </main>
     <footer class="rodape">
         Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" id="github"></a>
     </footer>
+    <script src="../js/reset-pwd.js"></script>
 </body>
 
 </html>

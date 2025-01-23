@@ -23,7 +23,7 @@ function calcularAssiduidade(){
     paragrafoAssiduidade.classList.remove('ocultar');
     buttonZerarCampos.classList.remove('ocultar');
     }else{
-    alert('Insira um valor válido!');
+    alert('A quantidade de dias trabalhados é obrigatória!');
     }
 }
 
@@ -33,8 +33,8 @@ function limparCampos(){
     inputAtrasos.value = "";
     inputAtestados.value = "";
     outputAssiduidade.innerText = "";
-    paragrafoAssiduidade.classList.add('ocultar');
-    buttonZerarCampos.classList.add('ocultar');
+    paragrafoAssiduidade.classList.toggle('ocultar');
+    buttonZerarCampos.classList.toggle('ocultar');
 }
 
 buttonZerarCampos.addEventListener('click', limparCampos)
