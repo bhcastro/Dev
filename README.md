@@ -1,1 +1,1 @@
-# Dev
+<a href="https://bhcastro.github.io/Dev/Projetos/Landing%20Page/html/index.html" target="_blank">Home</a>
