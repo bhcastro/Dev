@@ -9,7 +9,7 @@ const spanReset = document.getElementById('span-reset-pwd');
 const textoCodigo = "Insira o código recebido por e-mail."
 const textoEmail = "Insira seu e-mail para receber um código de verificação.";
 const codigoErrado = "O valor digitado não corresponde ao código enviado!";
-const codigoCerto = "Senha alterada!";
+const codigoCerto = "Senha alterada, em instantes você será redirecionado para a página de login!";
 const numeroVazio = "Insira o código recebido!"
 const numeroInvalido = "O código enviado é composto apenas por números!"
 let codigo = 0;
@@ -35,7 +35,7 @@ function verificarCodigo() {
                 inputCodigo.value = "";
                 inputCodigo.focus();
                 codigo = 9999;
-                window.location.href = "../html/login.html"
+                location.href = "../html/login.html"
             }else{
                 alert(codigoErrado);
                 inputCodigo.value = "";

@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+#login,
+#sign-in {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#login {
+    background-color: red;
+    margin-right: 0;
+}
+
+#sign-in {
+    background-color: blue;
+    margin-left: 0;
+}
+
+.inputs-teste {
+    margin: auto;
+    width: 50%;
+    margin: 2px auto;
+}
+
+#button-login,
+#button-signin {
+    margin: 15px 25%;
+    width: 50%;
+    cursor: pointer;
+}
+
+.login-ativo {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: 1.5s;
+    width: 90%;
+
+}
+
+.signin-ativo {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition: 1.5s;
+    width: 90%;
+}
+
+.inativo {
+    border-radius: 0;
+    width: 10%;
+    opacity: 0;}

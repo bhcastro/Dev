@@ -7,7 +7,7 @@ const nomeInvalido = "Insira um nome válido!";
 const sobrenomeInvalido = "Insira um sobrenome válido!";
 const emailInvalido = "Insira um e-mail!";
 const senhaInvalida = "Cadastre uma senha!";
-const cadastroEfetuado = "Cadastro efetuado com sucesso!";
+const cadastroEfetuado = "Cadastro efetuado com sucesso, você será redirecionado para a página de login!";
 
 function finalizarCadastro() {
     let nome = inputNome.value;
@@ -31,6 +31,7 @@ function verificarDados(campo1, campo2, campo3, campo4) {
         inputSobrenome.value = "";
         inputEmail.value = "";
         inputPassword.value = "";
+        location.href = '../html/login.html'
     }
 }
 botaoFinalizarCadastro.addEventListener("click", finalizarCadastro);
