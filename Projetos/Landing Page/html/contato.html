@@ -9,25 +9,36 @@
     <title>LabNet</title>
 </head>
 <body id="corpo">
-  <main id="conteudo-principal">
-    <h2 id="section-titulos">Ficou alguma dúvida? Entre em contato!</h2>
+  <header>
+    <h1 id="titulo-principal">LabNet</h1>
+    <nav id="home">
+        <a href="index.html"><span class="menu__header">Home</span></a>
+        <a href="calculadoras.html"><span class="menu__header">Calculadoras</span></a>
+        <a href="contato.html"><span class="menu__header">Contato</span></a>
+        <a href="cadastro.html" class="button" id="button-cadastrar">Cadastrar</a>
+        <a href="login.html" class="button" id="button-login">Área do Analista</a>
+    </nav>
+</header>
+  <main id="conteudo-principal-contato">
+    <h2 id="titulo-section-dados-contato">Ficou alguma dúvida? Entre em contato!</h2>
     <section id="section-contato">
-      <input class="inputs" id="input-nome" type="text" placeholder="Nome" required>
-      <input class="inputs" id="input-email" type="email" placeholder="E-mail" required>
-      <input class="inputs" id="input-assunto" type="text" placeholder="Assunto" required>
-      <textarea class="inputs" id="input-mensagem" rows="3" resize="none" placeholder="Digite sua mensagem..." required></textarea>
-      <input type="submit" class="inputs" id="submit-button">
+      <input class="inputs-contato" id="input-nome-contato" type="text" placeholder="Nome" required>
+      <input class="inputs-contato" id="input-email-contato" type="email" placeholder="E-mail" required>
+      <input class="inputs-contato" id="input-assunto-contato" type="text" placeholder="Assunto" required>
+      <textarea class="inputs-contato" id="input-mensagem-contato" rows="3" resize="none" placeholder="Digite sua mensagem..." required></textarea>
+      <input type="submit" class="inputs-contato" id="submit-button">
       <hr id="linha-contato">
     </section>
-    <h2 id="section-titulos">Outras formas de contato:</h2>
+    <h2 id="titulo-section-link-contato">Outras formas de contato:</h2>
     <section id="section-links">
-      <a class="links-contato" href="#">WhatsApp</a>
-      <a class="links-contato" href="#">Visite-nos</a>
-      <a class="links-contato" href="#">Instagram</a>
-      <a class="links-contato" href="#">LinkedIn</a>
-      <a class="links-contato" href="bhcastro.github.io" target="_blank">GitHub</a>
+      <a class="links-contato" href="#"><img class="imagem-links-contato" src="../img/Whatsapp.png"></a>
+      <a class="links-contato" href="#"><img class="imagem-links-contato" src="../img/Instagram.png"></a>
+      <a class="links-contato" href="#"><img class="imagem-links-contato" src="../img/Linkedin.png"></a>
+      <a class="links-contato" href="https://github.com/bhcastro/" target="_blank"><img class="imagem-links-contato" src="../img/Github_vazado.png"></a>
     </section>
   </main>
-  <script src="../js/scripts_calculadoras/contato.js"></script>
+  <footer class="rodape">
+    Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" id="github"></a>
+</footer>
 </body>
 </html>

@@ -5,16 +5,14 @@
     font-family: var(--fonte-padrao);
     cursor: default;
 }
-
-#conteudo-cadastro {
+#conteudo-principal-cadastro {
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    padding: 40px;
+    width: auto;
+    height: auto;
+    padding: 40px 0;
     background-image: linear-gradient(to bottom right, hsl(231, 58%, 30%, 75%), #01e08be1);
 }
-
-#conteudo__login {
+#div-dados-cadastro {
     margin: auto;
     padding: 15px;
     width: 75%;
@@ -23,52 +21,50 @@
     border-radius: 25px;
     line-height: 30px;
 }
-
-h2 {
+#titulo-cadastro {
+    font-weight: 500;
     font-size: 2.9em;
     margin: 15px;
 }
-
-#span-cadastro {
+#subtitulo-cadastro {
+    font-weight: 400;
     font-size: 1.15em;
 }
-
 .inputs-cadastro{
     cursor: text;
     font-size: 1em;
     padding: 10px 15px;
     margin: 10px;
     width: 90%;
-    border-radius: 10px;
+    height: 45px;
+    border-radius: 15px;
     outline: none;
     border: none;
     box-shadow: 0px 0px 3px 1px;
 }
-
 .inputs-cadastro:focus {
     box-shadow: inset 0px 0px 0px 2px;
     background-color: rgb(232, 232, 232);
 }
-
+#cabecalho-cadastro{
+    margin-bottom: 10px;
+}
 #dados-cadastro {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     margin: auto;
     width: 100%;
 }
-
 #botao-cadastrar {
     cursor: pointer;
     margin-top: 30px;
 }
-
-#botao__cadastrar:hover {
+#botao-cadastrar:hover {
     box-shadow: 0px 0px 10px 2px;
     background-color: rgb(232, 232, 232)
 }
-
-#botao__cadastrar:active {
+#botao-cadastrar:active {
     box-shadow: inset 0px 0px 5px 2px;
     background-color: rgb(216, 216, 216)
 }
