@@ -43,6 +43,31 @@
         Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" id="github"></a>
     </footer>
     <script src="../js/login.js"></script>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAvVJOcH1t1N5-o5giAUT2s7B3bJcGGUBE",
+    authDomain: "gesteam-c5af4.firebaseapp.com",
+    projectId: "gesteam-c5af4",
+    storageBucket: "gesteam-c5af4.firebasestorage.app",
+    messagingSenderId: "648799974042",
+    appId: "1:648799974042:web:bd2c89456622a6df866523",
+    measurementId: "G-E4Z9JEGFV6"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </body>
 
 </html>
