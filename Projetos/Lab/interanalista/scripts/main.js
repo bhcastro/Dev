@@ -1,6 +1,7 @@
+const botaoRealizar = document.getElementById('botao-realizar');
+const campoObrigatorio = "Este campo deve ser preenchido!"
+
 function iniciar(){
-    const botaoImprimir = document.querySelector('.botao__imprimir');
-    const botaRealizar = document.querySelector('.botao__realizar');
     const dadosAnalista = document.querySelector('nav');
     const conteudoPrincipal = document.querySelector('#conteudo_principal');
 
@@ -25,19 +26,8 @@ function iniciar(){
 
     dadosAnalista.classList.remove('dados__analista');
     dadosAnalista.classList.add('mostrar__nav');
-    botaRealizar.classList.add('ocultar');
-    botaoImprimir.classList.remove('ocultar');
+    botaoRealizar.classList.add('ocultar');
     conteudoPrincipal.classList.remove('ocultar');
 }
 
-function imprimir(){
-    const zerarBordas = document.querySelector('main');
-    const questao01Imprimir = document.querySelector('.lista__questao_01');
-    const botaoImprimir = document.querySelector('.botao__imprimir');
-    const seletor = document.querySelector('.seletor');
-    seletor.classList.add('ocultar');
-    zerarBordas.classList.add('zerar_bordas');
-    questao01Imprimir.classList.add('impressao');
-    botaoImprimir.classList.add('ocultar');
-    print();
-}
+botaoRealizar.addEventListener('click', iniciar);

@@ -30,7 +30,7 @@ function adicionarCelula(){
     contagemGlobal.push(parseInt(inputValor.value));
     somarCelulas();
     mostrarCelulas();
-    inputCelula.focus();
+    campoCelula.focus();
 }
 
 function removerCelula(celula){
@@ -44,7 +44,7 @@ function removerCelula(celula){
     if(listaDeCelulas.length === 0){
         celulas.innerHTML = '';
         valorTotalCelulas.textContent = '';
-        botaoImprimir.classList.add('ocultar');
+        //botaoImprimir.classList.add('ocultar');
     }
 }
 
@@ -58,19 +58,26 @@ function mostrarCelulas(){
 }
 
 function somarCelulas(){
+    botaoAdicionarCelula.classList.remove('ocultar');
     let total = 0;
     for (let celula of contagemGlobal) {
     total += celula;
     if (total === 100){
         botaoAdicionarCelula.classList.add('ocultar');
-        botaoImprimir.classList.remove('ocultar')
+        //botaoImprimir.classList.remove('ocultar');
         valorTotalCelulas.classList.add('valor__certo');
         valorTotalCelulas.classList.remove('valor__errado');
     }else if (total > 100) {
         botaoAdicionarCelula.classList.add('ocultar');
+        //botaoImprimir.classList.add('ocultar');
         valorTotalCelulas.classList.add('valor__errado');
         valorTotalCelulas.classList.remove('valor__certo');
         alert(valorSuperior);
+    }else{
+        botaoAdicionarCelula.classList.remove('ocultar');
+        //botaoImprimir.classList.add('ocultar');
+        valorTotalCelulas.classList.remove('valor__errado');
+        valorTotalCelulas.classList.remove('valor__certo');
     }   
     valorTotalCelulas.textContent = `Total: ${total}`;
     valorTotalCelulas.classList.add('mostrar__total');
