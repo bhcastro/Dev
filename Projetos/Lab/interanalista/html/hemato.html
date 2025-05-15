@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style-interanalista.css">
+    <!-- <link rel="stylesheet" href="../css/style-interanalista.css"> -->
     <link rel="shortcut icon" href="../img/micro_ico.png" type="image/x-icon">
-    <title>InterLab</title>
+    <title>Meliora - Sua melhoria contínua</title>
 </head>
 
-<body">
+<body>
     <header class="cabecalho">
-        <h1>Avaliação de Conhecimentos</h1>
-        <h2>Hematologia e Microscopia</h2>
+        <h1>Interanalista</h1>
         <!-- <div class="div__botao">
             <input class="botoes botao__realizar" id="botao-realizar" type="button" value="Realizar Prova">
         </div> -->
@@ -25,50 +24,64 @@
         <input readonly placeholder="Data" class="seletores seletor__data" id="data" name="Data">
     </nav>
     <main id="conteudo_principal" lass="ocultar">
-        <div id="questao_01">
-            <h3 name="Questão 1">1 - Identifique as estruturas:</h3>
-            <ul class="lista__questao_01">
-                <li><input class="inputs" type="text" name="Imagem A" placeholder="Digite"><br><img class="imagens"
-                        src="../img/imagem_a.jpg" alt="imagem"></li>
+        <div id="questoes">
+            <section id="uroanalise">
+                <div>
+                    <h3>Urinálise:</h3>
+                    <div>
+                        <p><span class="span-urina">Leucócitos: </span><input type="number" class="inputs-urina" id="wbc-urina"></p>
+                        <p><span class="span-urina">Hemácias: </span><input type="number" class="inputs-urina" id="rbc-urina"></p>
+                        <p><span class="span-urina">Céluas Epteliais: </span><input type="text" class="inputs-urina" id="cels-urina"></p>
+                        <p><span class="span-urina">Observações: </span><input type="text" id="obs-urina"><input type="button" value="+" class="botoes botao__adicionar"></p>
+                        <ul id="obs-li">
+                            <li>Obs teste <input type="button" value="-" class="botoes botao__remover"></li>
+                        </ul>
 
-                <li><input class="inputs" type="text" name="Imagem B" placeholder="Digite"><br><img class="imagens"
-                        src="../img/imagem_b.jpg" alt="imagem"></li>
-
-                <li><input class="inputs" type="text" name="Imagem C" placeholder="Digite"><br><img class="imagens"
-                        src="../img/imagem_c.jpg" alt="imagem"></li>
-
-                <li><input class="inputs" type="text" name="Imagem D" placeholder="Digite"><br><img class="imagens"
-                        src="../img/imagem_d.jpg" alt="imagem"><br></li>
-            </ul>
-        </div>
-        <div id="questao2">
-            <h3>2 - Qual valor de reticulócitos observado?</h3>
-            <input class="inputs" id="alt_A" type="number" id="iQUESTAO02" name="Valor de reticulócitos"
-                placeholder="Ex.: 1.23" step="0.1">
-        </div>
-        <div class="questao__03">
-            <h3>3 - Contagem diferencial:</h3>
-            <section class="seletor">
-                <input type="text" class="celula nome__celulas" placeholder="Digite a célula:">
-                <input type="text" class="celula valor__celulas" placeholder="Digite a quantidade:">
-                <input type="button" onclick="adicionarCelula()" class="botoes botao__adicionar" value="+">
+                    </div>
+                </div>
             </section>
-            <section class="contador__celulas">
-                <ul class="lista__celulas">
-                    <li class="diferencial">
-                        Adicione uma célula.
-                    </li>
-                </ul>
-                <p class="total ocultar">Total: <span class="total__celulas"></span></p>
+            <section id="hemato">
+                <div>
+                    <h3>Hematologia:</h3>
+                    <div class="diferencial">
+                        <h3>Contagem diferencial:</h3>
+                        <div class="seletor">
+                            <input type="text" class="celula nome__celulas" placeholder="Digite a célula:">
+                            <input type="text" class="celula valor__celulas" placeholder="Digite a quantidade:">
+                            <input type="button" onclick="adicionarCelula()" class="botoes botao__adicionar" value="+">
+                        </div>
+                        <div class="contador__celulas">
+                            <ul class="lista__celulas">
+                                <li class="diferencial">
+                                    Adicione uma célula.
+                                </li>
+                            </ul>
+                            <p class="total ocultar">Total: <span class="total__celulas"></span></p>
+                        </div>
+                        <p>
+                            <span class="span-hemato">Valor de plaquetas: </span><input type="number" class="inputs-hemato" id="input-plaquetas"><br>
+                            <span class="span-hemato">Plaquetas contadas: </span><span id="output-plaquetas"></span>
+                        </p>
+                        <p><span class="span-hemato">Observações: </span><input type="text" id="input-obs-hemato"><input type="button" value="+" class="botoes botao__adicionar" id="add-obs-hemato"></p>
+                        <ul id="lista-obs-hemato">
+                            <li>Obs teste <input type="button" value="-" class="botoes botao__remover"></li>
+                        </ul>
+                    </div>
+                    <div id="retic">
+                        <p>
+                            <span class="span-hemato">Valor de reticulócitos: </span><input type="number" class="inputs-hemato" id="input-retic">
+                        </p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
     <footer class="rodape">
-        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img
-                src="../img/github.png" alt="GitHub" class="github"></a>
+        Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" class="github"></a>
     </footer>
     <script src="../scripts/questao_03.js"></script>
     <script src="../scripts/main.js"></script>
-    </body>
+    <script src="../scripts/obsevacoes.js"></script>
+</body>
 
 </html>
