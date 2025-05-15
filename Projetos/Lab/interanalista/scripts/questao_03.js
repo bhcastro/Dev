@@ -6,7 +6,7 @@ const listaDeCelulas = [];
 const contagemGlobal = [];
 
 const valorSuperior = 'Valor de células ultrapassado, reveja sua contagem!'
-const nomeCelula = 'Não é possível inserir células sem nome!';
+const nomeCelula = 'Insira uma célula válida!';
 const valorCelula = 'Não é possível inserir células sem valor!';
 
 let valorTotalCelulas = document.querySelector('.total');
@@ -16,7 +16,7 @@ let inputValor = document.querySelector('.valor__celulas');
 function adicionarCelula(){
     let campoCelula = inputCelula.value.trim();
     let campoValor = parseInt(inputValor.value);
-    if (campoCelula === '') {
+    if (campoCelula === '' || !isNaN(campoCelula)) {
         alert(nomeCelula);
         inputCelula.focus();
         return;
