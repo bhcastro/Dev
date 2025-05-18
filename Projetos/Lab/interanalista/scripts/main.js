@@ -1,5 +1,6 @@
 const botaoRealizar = document.getElementById('botao-realizar');
-const campoObrigatorio = "Este campo deve ser preenchido!"
+const campoObrigatorio = "Este campo deve ser preenchido!";
+let inputRbc = document.getElementById('input-rbc');
 
 function iniciar(){
     const dadosAnalista = document.querySelector('nav');
@@ -30,4 +31,15 @@ function iniciar(){
     conteudoPrincipal.classList.remove('ocultar');
 }
 
+function calcularPlaquetas(){
+  const outputPlaquetas = document.getElementById('output-plaquetas');
+  let inputPlaquetas = document.getElementById('input-plaquetas');
+  let valorPlaquetas = Number.parseInt(inputPlaquetas.value.trim());
+  let inputRbc = document.getElementById('input-rbc');
+  let valorRbc= Number.parseFloat(inputRbc.value.trim());
+  let totalPlaquetas = valorRbc * valorPlaquetas;
+  outputPlaquetas.textContent = totalPlaquetas;
+}
+
+inputRbc.addEventListener("input", calcularPlaquetas);
 botaoRealizar.addEventListener('click', iniciar);
