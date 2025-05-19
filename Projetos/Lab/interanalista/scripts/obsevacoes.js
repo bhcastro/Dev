@@ -1,32 +1,49 @@
-const listaObsHemato = [];
-const obsUrina = [];
-const botaoAdicionarTarefaHemato = document.getElementById("add-obs-hemato");
-const botaoAdicionarTarefaUrina = document.getElementById("add-obs-urina");
+let arrayObsHemato = [];
+let arrayObsUrina = [];
+const botaoAdicionarHemato = document.getElementById("add-obs-hemato");
+const botaoAdicionarUrina = document.getElementById("add-obs-urina");
 
 function pegarObsHemato(){
   let inputObsHemato = document.getElementById('input-obs-hemato');
   let obsHemato = inputObsHemato.value.trim();
-  listaObsHemato.push(obsHemato);
-  console.log(listaObsHemato);
+  arrayObsHemato.push(obsHemato);
   let listaHemato = document.getElementById("lista-obs-hemato");
+  let novaObs = document.createElement('li');
+  novaObs.textContent = obsHemato;
+  listaHemato.appendChild(novaObs);
   inputObsHemato.value = "";
-  inserirObs(obsHemato, listaHemato);
+  inputObsHemato.focus();
 }
 
 function pegarObsUrina(){
   let inputObsUrina = document.getElementById('input-obs-urina');
   let obsUrina = inputObsUrina.value.trim();
-  let listaUrina = document.getElementById("lista-obs-urina");
+  arrayObsUrina.push(obsUrina);
+  let listaUrina = document.getElementById('lista-obs-urina');
+  let novaObs = document.createElement('li');
+  novaObs.textContent = obsUrina;
+  listaUrina.appendChild(novaObs);
+  //atualizarListas(listaUrina, arrayObsUrina);
   inputObsUrina.value = "";
-  inserirObs(obsUrina, listaUrina);
+  inputObsUrina.focus();
 }
 
-function inserirObs(valorObs, lista) {
-  let obs = valorObs;
-  let novaObs = document.createElement("li");
-  novaObs.textContent = obs;
-  lista.appendChild(novaObs);
+
+
+function atualizarListas(setor, array){
+  setor.textContent = "";
+  let i = 0;
+  for (i; i<array.length; i++){
+    let novaObs = document.createElement("li");
+    novaObs.innerHTML = array[i];
+    setor.appendChild(novaObs);
+  }
 }
 
-botaoAdicionarTarefaHemato.addEventListener("click", pegarObsHemato);
-botaoAdicionarTarefaUrina.addEventListener("click", pegarObsUrina);
+function removerObs(i, setor, array){
+  array.splice(i, 1);
+  atualizarListas(setor, array);  
+}
+
+botaoAdicionarHemato.addEventListener("click", pegarObsHemato);
+botaoAdicionarUrina.addEventListener("click", pegarObsUrina);
