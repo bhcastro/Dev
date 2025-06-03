@@ -1,0 +1,55 @@
+.celula{
+    margin: 15px;
+    cursor: text;
+    font-size: 1em;
+    font-weight: 500;
+    width: 200px;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px;
+}
+
+
+.valor-errado{
+    color: red;
+}
+.valor-correto{
+    color: green;
+}
+
+.mostrar-total{
+    display: block;
+}
+
+li{
+    margin: 15px;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+p{
+    margin: 10px 160px;
+}
+
+ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+#output-diferencial{
+    margin: 25px auto;
+    font-weight: 500;
+    font-size: 1.8em;
+}
+
+.ocultar{
+    display: none;
+}

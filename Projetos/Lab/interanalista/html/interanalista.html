@@ -3,66 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/">
+    <link rel="stylesheet" href="../css/interanalista.css">
     <title>Meliora - Gestão ágil, melhotia constante</title>
 </head>
 <body>
     <header>
         <h1>Meliora</h1>
         <h2>Interanalista</h2>
-    </header>
-    <nav id="identificador-analista">
+        <div id="div-botao-realizar">
+            <button class="botoes" id="botao-realizar">Realizar</button>
+        </div>
+        <nav class="ocultar" id="identificador-analista">
         <input readonly placeholder="Nome" class="identificadores" id="nome" name="Nome">
         <input readonly placeholder="Unidade" class="identificadores" id="unidade" name="Unidade">
         <input readonly placeholder="Data" class="identificadores" id="data" name="Data">
     </nav>
-    <main>
+    </header>
+    <main class="ocultar">
         <section id="urinalise">
             <div id="div-sedimentos">
                 <h2>Sedimentoscopia</h2>
-                <p>Hemácias: <input type="text" name="hemacias-urina" id="hemacias-urina"></p>
-                <p>Leucócitos: <input type="text" name="leucocitos-urina" id="leucocitos-urina"></p>
-                <p>Células: <input type="text" name="celulas-urina" id="celulas-urina"></p>
-            </div>
-            <div id="div-obs-urina">
-                <textarea name="obs-urina" id="obs-urina" cols="40" rows="5" placeholder="Observações"></textarea>
+                <p>
+                    <label for="hemacias-urina">Hemácias:</label>
+                    <input required class="inputs" type="text" name="hemacias-urina" id="hemacias-urina" autocomplete="off">
+                </p>
+                <p>
+                    <label for="leucocitos-urina">Leucócitos:</label>
+                    <input required class="inputs" type="text" name="leucocitos-urina" id="leucocitos-urina" autocomplete="off">
+                </p>
+                <p>
+                    <label for="celulas-urina">Células:</label>
+                    <input required class="inputs" type="text" name="celulas-urina" id="celulas-urina" autocomplete="off">
+                </p>
+                <p>
+                    <label for="input-obs-urina">Observações:</label>
+                    <input class="inputs" type="text" id="input-obs-urina" autocomplete="off"><button class="botoes"id="botao-add-obs-urina">+</button>
+                </p>
+                    <ol id="lista-obs-unira"></ol>
             </div>
         </section>
         <section id="hematologia">
             <div id="div-diferencial">
                 <h2>Contagem diferencial</h2>
                     <div class="seletor">
-                        <input type="text" class="celula nome__celulas" placeholder="Digite a célula:">
-                        <input type="text" class="celula valor__celulas" placeholder="Digite a quantidade:">
-                        <input type="button" onclick="adicionarCelula()" class="botoes botao__adicionar" value="+">
-                    </div>
-                    <div class="contador__celulas">
+                        <input type="text" class="celula nome__celulas" placeholder="Digite a célula:" autocomplete="off">
+                        <input type="text" class="celula valor__celulas" placeholder="Digite a quantidade:" autocomplete="off">
+                        <button class="botoes" id="botao-add-celula">+</button>
                         <ul class="lista__celulas">
-                            <li class="diferencial">
-                                Adicione uma célula.
-                            </li>
                         </ul>
-                        <p class="total ocultar">Total: <span class="total__celulas"></span></p>
+                            <p id="output-diferencial"></p>
                     </div>
-                    <p>Observações: <input type="text" id="input-obs-hemato"><input type="button" value="+" class="botoes botao__adicionar" id="add-obs-hemato"></p>
-                    <ol id="lista-obs-hemato" style="list-style-type: decimal"></ol>
+                    <p>
+                        <label for="input-obs-hemato">Observações:</label>
+                        <input class="inputs" type="text" name="input-obs-hemato" id="input-obs-hemato" autocomplete="off"><button class="botoes"id="botao-add-obs-hemato">+</button></p>
+                    </p>
+                    <ol id="lista-obs-hemato"></ol>
             </div>
             <div id="div-plaquetas">
                 <h2>Contagem de plaquetas</h2>
-                <p>Plaquetas contadas: <input type="number" name="plaquetas-contadas" class="input-plaquetas" id="plaquetas-contadas"></p>
-                <p>Valor do RBC: <input type="number" name="valor-rbc" class="input-plaquetas" id="valor-rbc"></p>
-                <p>Valor calculado: <input name="plaquetas-calculadas" class="input-plaquetas" id="output-plaquetas" readonly></p>
+                <p>
+                    <label for="plaquetas-contadas">Plaquetas contadas:</label>
+                    <input required autocomplete="off" class="inputs" type="number" name="plaquetas-contadas" class="input-plaquetas" id="plaquetas-contadas">
+                </p>
+                <p>
+                    <label for="valor-rbc">Valor do RBC:</label>
+                    <input required autocomplete="off" class="inputs" type="number" name="valor-rbc" class="input-plaquetas" id="valor-rbc">
+                </p>
+                <p>
+                    <label for="output-plaquetas">Valor calculado:</label>
+                    <input class="inputs" name="plaquetas-calculadas" class="input-plaquetas" id="output-plaquetas" readonly>
+                </p>
             </div>
             <div id="div-reticulocitos">
                 <h2>Contagem de reticulócitos</h2>
-                <p>Reticulócitos contados: <input type="number" class="inputs-retic" id="input-reticulocitos"></p>
-                <p>Reticulócitos calculados: <input class="inputs-retic" id="output-reticulocitos" readonly></p>
+                <p>
+                    <label for="input-reticulocitos">Reticulócitos contados:</label>
+                    <input required autocomplete="off" class="inputs" type="number" class="inputs-retic" name="input-reticulocitos" id="input-reticulocitos">
+                </p>
+                <p>
+                    <label for="output-reticulocitos">Reticulócitos calculados:</label>
+                    <input class="inputs" name="output-reticulocitos" id="output-reticulocitos" readonly>
+                </p>
             </div>
         </section>
+        <button class="botoes" id="botao-finalizar">Finalizar</button>
     </main>
     <footer>
         <p>Meliora é um produto pertencente ao ecossistema Mindra, todos os direitos reservados.</p>
         <p>Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" class="github"></a></p>
     </footer>
+    <script src="../scripts/diferencial.js"></script>
+    <script src="../scripts/calculos-serie-vermelha.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

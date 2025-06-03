@@ -1,18 +1,17 @@
-.rodape{
+footer{
+    background-color: var(--azul-hover);
     display: flex;
-    margin: 10px auto;
-    padding: 5px;
-    width: 350px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-weight: 500;
-    border: 2px var(--cor01) solid;
-    border-radius: 25px;
-    font-size: 1.1em;
+    padding: 5px;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1em;
 }
-.rodape:hover{
-    cursor: default;
 
+footer p{
+    text-align: center;
+    width: 50%;
 }
 
 .github{
@@ -20,4 +19,5 @@
     top: 2px;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }

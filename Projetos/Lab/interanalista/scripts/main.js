@@ -1,18 +1,15 @@
 const botaoRealizar = document.getElementById('botao-realizar');
-let inputPlaquetas = document.getElementById('input-plaquetas');
-let inputRbc = document.getElementById('input-rbc');
+const botaoFinalizar = document.getElementById('botao-finalizar');
 
 function iniciar(){
     const dadosAnalista = document.querySelector('nav');
-    const conteudoPrincipal = document.getElementById('conteudo_principal');
+    const conteudoPrincipal = document.querySelector('main');
 
     let analista = prompt ('Digite seu nome:');
-    let matricula = prompt ('Digite seu ID:');
-    let filial = prompt ('Digite sua unidade:');
+    let unidade = prompt ('Digite sua unidade:');
 
-    document.getElementById('id').value = matricula;
     document.getElementById('nome').value = analista;
-    document.getElementById('unidade').value = filial;
+    document.getElementById('unidade').value = unidade;
 
     let data = new Date();
     let dia = data.getDate();
@@ -25,22 +22,11 @@ function iniciar(){
     let dataRealizacao = `${dia}/${mes}/${ano}`;
     document.getElementById('data').value = dataRealizacao;
 
-    dadosAnalista.classList.remove('dados__analista');
-    dadosAnalista.classList.add('mostrar__nav');
+    dadosAnalista.classList.remove('ocultar');
     botaoRealizar.classList.add('ocultar');
     conteudoPrincipal.classList.remove('ocultar');
 }
-
-function calcularPlaquetas(){
-  const outputPlaquetas = document.getElementById('output-plaquetas');
-  let valorPlaquetas = Number.parseInt(inputPlaquetas.value.trim());
-  let valorRbc= Number.parseFloat(inputRbc.value.trim());
-  let totalPlaquetas = (valorRbc * valorPlaquetas)*1000;
-  if (!isNaN(totalPlaquetas)) {
-    outputPlaquetas.textContent = `Total de plaquetas: ${totalPlaquetas}`;
-  }
-}
-
-inputRbc.addEventListener("input", calcularPlaquetas);
-inputPlaquetas.addEventListener("input", calcularPlaquetas);
 botaoRealizar.addEventListener('click', iniciar);
+botaoFinalizar.addEventListener('click', function() {
+  window.print();
+});

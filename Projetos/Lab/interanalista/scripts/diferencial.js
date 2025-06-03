@@ -1,4 +1,4 @@
-const botaoAdicionarCelula = document.querySelector('.botao__adicionar');
+const botaoAdicionarCelula = document.getElementById('botao-add-celula');
 const botaoRemoverCelula = document.querySelector('.botao__remover');
 const celulas = document.querySelector('.lista__celulas');
 const botaoImprimir = document.querySelector('.botao__imprimir');
@@ -9,7 +9,7 @@ const valorSuperior = 'Valor de células ultrapassado, reveja sua contagem!'
 const nomeCelula = 'Insira uma célula válida!';
 const valorCelula = 'Não é possível inserir células sem valor!';
 
-let valorTotalCelulas = document.querySelector('.total');
+let valorTotalCelulas = document.getElementById('output-diferencial');
 let inputCelula = document.querySelector('.celula');
 let inputValor = document.querySelector('.valor__celulas');
 
@@ -50,7 +50,7 @@ function removerCelula(celula){
 
 function mostrarCelulas(){
     let novaCelula = '';
-    listaDeCelulas.forEach((celula, index) =>{novaCelula = novaCelula += `<li class="diferencial">${celula}: ${contagemGlobal[index]}<input type="button" class="botoes botao__remover" value="-" onclick="removerCelula(${index})"></li>`
+    listaDeCelulas.forEach((celula, index) =>{novaCelula = novaCelula += `<li class="diferencial">${celula}: ${contagemGlobal[index]}<input type="button" class="botoes" id="botao__remover" value="-" onclick="removerCelula(${index})"></li>`
 });
     celulas.innerHTML = novaCelula;
     inputCelula.value = '';
@@ -65,21 +65,23 @@ function somarCelulas(){
     if (total === 100){
         botaoAdicionarCelula.classList.add('ocultar');
         //botaoImprimir.classList.remove('ocultar');
-        valorTotalCelulas.classList.add('valor__certo');
-        valorTotalCelulas.classList.remove('valor__errado');
+        valorTotalCelulas.classList.add('valor-correto');
+        valorTotalCelulas.classList.remove('valor-errado');
     }else if (total > 100) {
         botaoAdicionarCelula.classList.add('ocultar');
         //botaoImprimir.classList.add('ocultar');
-        valorTotalCelulas.classList.add('valor__errado');
-        valorTotalCelulas.classList.remove('valor__certo');
+        valorTotalCelulas.classList.add('valor-errado');
+        valorTotalCelulas.classList.remove('valor-correto');
         alert(valorSuperior);
     }else{
         botaoAdicionarCelula.classList.remove('ocultar');
         //botaoImprimir.classList.add('ocultar');
-        valorTotalCelulas.classList.remove('valor__errado');
-        valorTotalCelulas.classList.remove('valor__certo');
+        valorTotalCelulas.classList.remove('valor-errado');
+        valorTotalCelulas.classList.remove('valor-correto');
     }   
     valorTotalCelulas.textContent = `Total: ${total}`;
-    valorTotalCelulas.classList.add('mostrar__total');
+    valorTotalCelulas.classList.add('mostrar-total');
     }
 }
+
+botaoAdicionarCelula.addEventListener('click', adicionarCelula);

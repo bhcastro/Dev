@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url(../css/header.css);
+@import url(../css/nav.css);
+@import url(../css/diferencial.css);
+@import url(../css/botoes.css);
+@import url(../css/footer.css);
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    font-family: var(--fonte-padrao);
+}
+
+:root {
+    --fonte-padrao: "Ubuntu", sans-serif;
+    --verde-padrao: #7ce7be;
+    --verde-hover: #01e08be1;
+    --azul-contraste: #202d79;
+    --azul-hover: hsl(231, 58%, 30%, 75%);
+    --branco-padrao: #ffffff;
+    --preto-padrao: #000000;
+    --preto-transparente: hsla(0, 0%, 0%, 0.45);
+    --gradiente-background: linear-gradient(to bottom right, hsl(231, 58%, 30%, 75%), #01e08be1);
+    --cinza-transparente: rgba(216, 216, 216, 0.5);
+    --cinza-hover: rgb(232, 232, 232);
+    --cinza-active: rgb(216, 216, 216)
+}
+
+main {
+    background-image: var(--gradiente-background);
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+#div-diferencial, #div-plaquetas , #div-sedimentos, #div-reticulocitos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 90%;
+    height: auto;
+    background-color: var(--cinza-transparente);
+}
+
+h2 {
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+.seletor{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.inputs {
+    width: 50%;
+    margin: auto;
+    cursor: text;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 1px;
+}
+.inputs:focus, .celula:focus{
+    box-shadow: inset 0px 0px 0px 2px;
+    background-color: rgb(232, 232, 232);
+}
+label{
+    display: inline-block;
+    width: 230px;
+    font-weight: 500;
+    font-size: 1.2em;
+}

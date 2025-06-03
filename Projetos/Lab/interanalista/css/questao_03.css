@@ -45,13 +45,13 @@
     margin: 10px;
 }
 
-.valor__errado{
+.valor-errado{
     color: red;
 }
-.valor__certo{
+.valor-correto{
     color: green;
 }
 
-.mostrar__total{
+.mostrar-total{
     display: block;
 }
