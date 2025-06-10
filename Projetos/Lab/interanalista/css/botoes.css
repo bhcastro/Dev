@@ -1,5 +1,6 @@
 .botoes{
     margin: auto 15px;
+    margin-right: -70px;
     padding: 10px 15px;
     width: 60px;
     border: none;
@@ -21,13 +22,13 @@
     background-color: var(--cinza-active);
 }
 
-#botao-finalizar{
+#botao-imprimir{
     margin: auto;
     width: fit-content;
     font-size: 1.2em;
 }
 
-#botao__remover{
+#botao-remover{
     width: 40px;
     padding: 2px 0;
 }

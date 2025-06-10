@@ -28,9 +28,13 @@
     --preto-transparente: hsla(0, 0%, 0%, 0.45);
     --gradiente-background: linear-gradient(to bottom right, hsl(231, 58%, 30%, 75%), #01e08be1);
     --cinza-transparente: rgba(216, 216, 216, 0.5);
-    --cinza-hover: rgb(232, 232, 232);
+    --cinza-hover: rgba(232, 232, 232, 0.774);
     --cinza-active: rgb(216, 216, 216)
 }
+
+.ocultar{
+    display: none;
+} 
 
 main {
     background-image: var(--gradiente-background);
@@ -38,18 +42,36 @@ main {
     text-align: center;
 }
 
+p{
+    margin: 10px auto;
+}
 
-#div-diferencial, #div-plaquetas , #div-sedimentos, #div-reticulocitos{
+li{
+    margin: 15px;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+#div-diferencial, #div-plaquetas, #div-sedimentos, #div-reticulocitos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 0;
     border: 1px solid black;
     border-radius: 25px;
-    width: 90%;
-    height: auto;
+    width: 70%;
     background-color: var(--cinza-transparente);
 }
 
@@ -64,7 +86,7 @@ h2 {
 }
 
 .inputs {
-    width: 50%;
+    width: fit-content;
     margin: auto;
     cursor: text;
     font-size: 1em;
@@ -77,11 +99,12 @@ h2 {
 }
 .inputs:focus, .celula:focus{
     box-shadow: inset 0px 0px 0px 2px;
-    background-color: rgb(232, 232, 232);
+    background-color: var(--cinza-hover);
 }
 label{
+    width: 150px;
     display: inline-block;
-    width: 230px;
+    margin: auto 5px;
     font-weight: 500;
     font-size: 1.2em;
 }

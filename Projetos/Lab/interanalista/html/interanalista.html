@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/interanalista.css">
-    <title>Meliora - Gestão ágil, melhotia constante</title>
+    <link rel="stylesheet" href="../css/interanalista.css" media="screen">
+    <link rel="stylesheet" href="../css/impressao.css" media="print">
+    <title>Meliora - Gestão ágil, melhoria constante</title>
 </head>
 <body>
     <header>
         <h1>Meliora</h1>
         <h2>Interanalista</h2>
         <div id="div-botao-realizar">
-            <button class="botoes" id="botao-realizar">Realizar</button>
+        <button class="botoes" id="botao-realizar">Iniciar</button>
         </div>
         <nav class="ocultar" id="identificador-analista">
-        <input readonly placeholder="Nome" class="identificadores" id="nome" name="Nome">
+        <input  placeholder="Nome" class="identificadores" id="nome" name="Nome">
         <input readonly placeholder="Unidade" class="identificadores" id="unidade" name="Unidade">
         <input readonly placeholder="Data" class="identificadores" id="data" name="Data">
     </nav>
@@ -37,8 +38,10 @@
                 </p>
                 <p>
                     <label for="input-obs-urina">Observações:</label>
-                    <input class="inputs" type="text" id="input-obs-urina" autocomplete="off"><button class="botoes"id="botao-add-obs-urina">+</button>
+                    <input class="inputs" type="text" id="input-obs-urina" autocomplete="off">
+                    <button class="botoes"id="botao-add-obs-urina">+</button>
                 </p>
+                
                     <ol id="lista-obs-unira"></ol>
             </div>
         </section>
@@ -51,7 +54,7 @@
                         <button class="botoes" id="botao-add-celula">+</button>
                         <ul class="lista__celulas">
                         </ul>
-                            <p id="output-diferencial"></p>
+                        <p id="output-diferencial"></p>
                     </div>
                     <p>
                         <label for="input-obs-hemato">Observações:</label>
@@ -62,7 +65,7 @@
             <div id="div-plaquetas">
                 <h2>Contagem de plaquetas</h2>
                 <p>
-                    <label for="plaquetas-contadas">Plaquetas contadas:</label>
+                    <label for="plaquetas-contadas">Valor contado:</label>
                     <input required autocomplete="off" class="inputs" type="number" name="plaquetas-contadas" class="input-plaquetas" id="plaquetas-contadas">
                 </p>
                 <p>
@@ -77,20 +80,20 @@
             <div id="div-reticulocitos">
                 <h2>Contagem de reticulócitos</h2>
                 <p>
-                    <label for="input-reticulocitos">Reticulócitos contados:</label>
+                    <label for="input-reticulocitos">Valor contado:</label>
                     <input required autocomplete="off" class="inputs" type="number" class="inputs-retic" name="input-reticulocitos" id="input-reticulocitos">
                 </p>
                 <p>
-                    <label for="output-reticulocitos">Reticulócitos calculados:</label>
+                    <label for="output-reticulocitos">Valor calculado:</label>
                     <input class="inputs" name="output-reticulocitos" id="output-reticulocitos" readonly>
                 </p>
             </div>
         </section>
-        <button class="botoes" id="botao-finalizar">Finalizar</button>
+        <button class="botoes" id="botao-imprimir">Imprimir</button>
     </main>
     <footer>
-        <p>Meliora é um produto pertencente ao ecossistema Mindra, todos os direitos reservados.</p>
-        <p>Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" class="github"></a></p>
+        <p id="paragrafo-footer">Meliora é um produto pertencente ao ecossistema Mindra, todos os direitos reservados.</p>
+        <p id="paragrafo-github">Desenvolvido por Bruno Castro&nbsp;<a target="_blank" href="https://github.com/bhcastro/"><img src="../img/github.png" alt="GitHub" class="github"></a></p>
     </footer>
     <script src="../scripts/diferencial.js"></script>
     <script src="../scripts/calculos-serie-vermelha.js"></script>

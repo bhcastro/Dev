@@ -26,7 +26,17 @@ function iniciar(){
     botaoRealizar.classList.add('ocultar');
     conteudoPrincipal.classList.remove('ocultar');
 }
+
+function imprimir(){
+    const paragrafoFooter = document.getElementById('paragrafo-footer');
+    const footerPadrao = 'Meliora é um produto pertencente ao ecossistema Mindra, todos os direitos reservados.';
+    const footerImpressao = 'Versão para impressão do formulário de interanalista, conheça a versão completa e mais produtos acessando: www.mindra.com.br';
+    paragrafoFooter.textContent = footerImpressao;
+    window.print();
+    if (paragrafoFooter.innerText === footerImpressao) {
+      paragrafoFooter.innerText = footerPadrao;
+    }
+}
+
 botaoRealizar.addEventListener('click', iniciar);
-botaoFinalizar.addEventListener('click', function() {
-  window.print();
-});
+botaoImprimir.addEventListener('click', imprimir);

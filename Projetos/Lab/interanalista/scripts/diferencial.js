@@ -1,7 +1,8 @@
 const botaoAdicionarCelula = document.getElementById('botao-add-celula');
-const botaoRemoverCelula = document.querySelector('.botao__remover');
+const botaoRemoverCelula = document.querySelector('.botao-remover');
+const botaoImprimir = document.getElementById('botao-imprimir');
 const celulas = document.querySelector('.lista__celulas');
-const botaoImprimir = document.querySelector('.botao__imprimir');
+
 const listaDeCelulas = [];
 const contagemGlobal = [];
 
@@ -30,7 +31,7 @@ function adicionarCelula(){
     contagemGlobal.push(parseInt(inputValor.value));
     somarCelulas();
     mostrarCelulas();
-    campoCelula.focus();
+    inputCelula.focus();
 }
 
 function removerCelula(celula){
@@ -40,17 +41,18 @@ function removerCelula(celula){
         contagemGlobal.splice(celula, 1);
         mostrarCelulas();
         somarCelulas();
+        inputCelula.focus();
     }
     if(listaDeCelulas.length === 0){
         celulas.innerHTML = '';
         valorTotalCelulas.textContent = '';
-        //botaoImprimir.classList.add('ocultar');
+        botaoImprimir.classList.add('ocultar');
     }
 }
 
 function mostrarCelulas(){
     let novaCelula = '';
-    listaDeCelulas.forEach((celula, index) =>{novaCelula = novaCelula += `<li class="diferencial">${celula}: ${contagemGlobal[index]}<input type="button" class="botoes" id="botao__remover" value="-" onclick="removerCelula(${index})"></li>`
+    listaDeCelulas.forEach((celula, index) =>{novaCelula = novaCelula += `<li class="diferencial">${celula}: ${contagemGlobal[index]}<input type="button" class="botoes" id="botao-remover" value="-" onclick="removerCelula(${index})"></li>`
 });
     celulas.innerHTML = novaCelula;
     inputCelula.value = '';
@@ -64,18 +66,18 @@ function somarCelulas(){
     total += celula;
     if (total === 100){
         botaoAdicionarCelula.classList.add('ocultar');
-        //botaoImprimir.classList.remove('ocultar');
+        botaoImprimir.classList.remove('ocultar');
         valorTotalCelulas.classList.add('valor-correto');
         valorTotalCelulas.classList.remove('valor-errado');
     }else if (total > 100) {
         botaoAdicionarCelula.classList.add('ocultar');
-        //botaoImprimir.classList.add('ocultar');
+        botaoImprimir.classList.add('ocultar');
         valorTotalCelulas.classList.add('valor-errado');
         valorTotalCelulas.classList.remove('valor-correto');
         alert(valorSuperior);
     }else{
         botaoAdicionarCelula.classList.remove('ocultar');
-        //botaoImprimir.classList.add('ocultar');
+        botaoImprimir.classList.add('ocultar');
         valorTotalCelulas.classList.remove('valor-errado');
         valorTotalCelulas.classList.remove('valor-correto');
     }   
@@ -83,5 +85,4 @@ function somarCelulas(){
     valorTotalCelulas.classList.add('mostrar-total');
     }
 }
-
 botaoAdicionarCelula.addEventListener('click', adicionarCelula);
