@@ -37,3 +37,18 @@
     width: fit-content;
     margin: 10px auto;
 }
+
+li .botoes{
+    padding: 4px 8px;
+    width: 120px;
+    margin-right: 0;
+    font-size: 0.7em;
+}
+
+ol .botao-limpar{
+    width: 150px;
+    padding: 10px;
+    font-size: 1em;
+    order: 10;
+    margin: auto;
+}

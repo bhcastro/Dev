@@ -7,11 +7,12 @@ const outputCalculoPlaquetas = document.getElementById('output-plaquetas');
 function calcularPlaquetas(){
     let plaquetasContadas = parseFloat(inputPlaquetasContadas.value.trim());
     let valorRbc = parseFloat(inputValorRbc.value.trim());
-    let plaquetasCalculadas = (plaquetasContadas * valorRbc).toFixed(0);
-    if (!isNaN(plaquetasCalculadas)){
-        outputCalculoPlaquetas.value = plaquetasCalculadas;
+
+    if (!isNaN(plaquetasContadas) && !isNaN(valorRbc)) {
+        const plaquetasCalculadas = (plaquetasContadas * valorRbc * 1000).toLocaleString('pt-BR');
+        outputCalculoPlaquetas.textContent = `Valor calculado: ${plaquetasCalculadas}`;
     }else{
-        outputCalculoPlaquetas.value = 'Calculando...'
+    outputCalculoPlaquetas.textContent = 'Insira valores válidos.';
     }
 }
 inputValorRbc.addEventListener('input', calcularPlaquetas);
@@ -23,11 +24,12 @@ const outputReticulocitos = document.getElementById('output-reticulocitos');
 
 function calcularReticulocitos(){
     let reticulocitosContados = parseFloat(inputReticulocitos.value.trim());
-    let reticulocitosCalculados = (reticulocitosContados / 10).toFixed(2);
-    if (!isNaN(reticulocitosCalculados)){
-        outputReticulocitos.value = reticulocitosCalculados;
+
+    if (!isNaN(reticulocitosContados)){
+        let reticulocitosCalculados = (reticulocitosContados / 10).toFixed(2).replace('.',',');
+        outputReticulocitos.textContent = `Valor calculado: ${reticulocitosCalculados}`;
     }else{
-        outputReticulocitos.value = 'Calculando...'
+        outputReticulocitos.textContent = 'Insira um valor válido.'
     }
 }
 inputReticulocitos.addEventListener('input', calcularReticulocitos);

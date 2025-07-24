@@ -27,7 +27,7 @@ h2{
     font-size: 1.6rem;
 }
 
-button, .botoes, .celula{
+button, .botoes, .celula, .paragrafo-observacoes{
     display: none;
 }
 

@@ -1,26 +1,37 @@
 const botaoRealizar = document.getElementById('botao-realizar');
 const botaoFinalizar = document.getElementById('botao-finalizar');
+const dadosAnalista = document.querySelector('nav');
+const conteudoPrincipal = document.querySelector('main');
 
 function iniciar(){
-    const dadosAnalista = document.querySelector('nav');
-    const conteudoPrincipal = document.querySelector('main');
+    const nomeInvalido = 'Digite um nome válido!';
+    const unidadeInvalida = 'Digite uma unidade válida!';
 
     let analista = prompt ('Digite seu nome:');
-    let unidade = prompt ('Digite sua unidade:');
+    while(analista.trim() === ""){
+      alert(nomeInvalido);
+      analista = prompt ('Digite seu nome:');
+    }
 
-    document.getElementById('nome').value = analista;
-    document.getElementById('unidade').value = unidade;
+    let unidade = prompt ('Digite sua unidade:');
+    while(unidade.trim() === ""){
+      alert(unidadeInvalida);
+      unidade = prompt ('Digite sua unidade:');
+    }
+
+    document.getElementById('nome').textContent = `Analista: ${analista}`;
+    document.getElementById('unidade').textContent = `Unidade: ${unidade}`;
 
     let data = new Date();
     let dia = data.getDate();
-    dia = dia <10? `0${dia}` : dia;
+    dia = dia < 10? `0${dia}` : dia;
 
-    let mes =data.getMonth();
-    mes = mes++ <10? `0${mes}` : mes++;
+    let mes = data.getMonth();
+    mes = mes++ < 10? `0${mes}` : mes++;
     
     let ano = data.getFullYear();
     let dataRealizacao = `${dia}/${mes}/${ano}`;
-    document.getElementById('data').value = dataRealizacao;
+    document.getElementById('data').textContent = `Data: ${dataRealizacao}`;
 
     dadosAnalista.classList.remove('ocultar');
     botaoRealizar.classList.add('ocultar');

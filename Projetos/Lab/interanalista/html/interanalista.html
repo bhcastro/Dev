@@ -16,12 +16,12 @@
         <button class="botoes" id="botao-realizar">Iniciar</button>
         </div>
         <nav class="ocultar" id="identificador-analista">
-        <input  placeholder="Nome" class="identificadores" id="nome" name="Nome">
-        <input readonly placeholder="Unidade" class="identificadores" id="unidade" name="Unidade">
-        <input readonly placeholder="Data" class="identificadores" id="data" name="Data">
+        <span class="identificadores" id="nome" name="Nome"></span>
+        <span class="identificadores" id="unidade" name="Unidade"></span>
+        <span class="identificadores" id="data" name="Data"></span>
     </nav>
     </header>
-    <main >
+    <main class="ocultar">
         <section id="urinalise">
             <div id="div-sedimentos">
                 <h2>Sedimentoscopia</h2>
@@ -37,7 +37,7 @@
                     <label for="celulas-urina">Células:</label>
                     <input required class="inputs" type="text" name="celulas-urina" id="celulas-urina" autocomplete="off">
                 </p>
-                <p>
+                <p class="paragrafo-observacoes">
                     <label for="input-obs-urina">Observações:</label>
                     <input class="inputs" type="text" id="input-obs-urina" autocomplete="off">
                     <button class="botoes"id="botao-add-obs-urina">+</button>
@@ -57,7 +57,7 @@
                         </ul>
                         <p id="output-diferencial"></p>
                     </div>
-                    <p>
+                    <p class="paragrafo-observacoes">
                         <label for="input-obs-hemato">Observações:</label>
                         <input class="inputs" type="text" name="input-obs-hemato" id="input-obs-hemato" autocomplete="off"><button class="botoes"id="botao-add-obs-hemato">+</button></p>
                     </p>
@@ -73,10 +73,12 @@
                     <label for="valor-rbc">Valor do RBC:</label>
                     <input required autocomplete="off" class="inputs" type="number" name="valor-rbc" class="input-plaquetas" id="valor-rbc">
                 </p>
-                <p>
-                    <label for="output-plaquetas">Valor calculado:</label>
-                    <input class="inputs" name="plaquetas-calculadas" class="input-plaquetas" id="output-plaquetas" readonly>
-                </p>
+                <span class="outputs" id="output-plaquetas"></span>
+                <p class="paragrafo-observacoes">
+                    <label for="input-obs-plaqueta">Observações:</label>
+                    <input class="inputs" type="text" name="input-obs-plaqueta" id="input-obs-plaqueta" autocomplete="off"><button class="botoes"id="botao-add-obs-plaqueta">+</button></p>
+                    </p>
+                    <ol id="lista-obs-plaqueta"></ol>
             </div>
             <div id="div-reticulocitos">
                 <h2>Contagem de reticulócitos</h2>
@@ -84,10 +86,7 @@
                     <label for="input-reticulocitos">Valor contado:</label>
                     <input required autocomplete="off" class="inputs" type="number" class="inputs-retic" name="input-reticulocitos" id="input-reticulocitos">
                 </p>
-                <p>
-                    <label for="output-reticulocitos">Valor calculado:</label>
-                    <input class="inputs" name="output-reticulocitos" id="output-reticulocitos" readonly>
-                </p>
+                <span class="outputs" id="output-reticulocitos"></span>
             </div>
         </section>
         <button class="botoes" id="botao-imprimir">Imprimir</button>
